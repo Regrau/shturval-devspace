@@ -21,3 +21,20 @@ echo "The effective dev container containerUser's home directory is '$_CONTAINER
 
 curl -L https://public.shturval.tech/stc-$STC_VERSION -o /usr/local/bin/stc
 chmod +x /usr/local/bin/stc
+
+curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+helm repo add shturval https://r.shturval.tech/repository/shturval_helm
+
+curl -L https://dl.k8s.io/release/v1.33.0/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl
+chmod +x /usr/local/bin/kubectl
+
+cat << EOF >> /etc/zsh/zshrc
+kubectl () {
+    command kubectl $*
+    if [[ -z $KUBECTL_COMPLETE ]]
+    then
+        source <(command kubectl completion zsh)
+        KUBECTL_COMPLETE=1 
+    fi
+}
+EOF
