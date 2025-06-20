@@ -28,4 +28,4 @@ su $_REMOTE_USER -c "helm repo add shturval https://r.shturval.tech/repository/s
 curl -L https://dl.k8s.io/release/v1.33.0/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl
 chmod +x /usr/local/bin/kubectl
 
-cat 'source <(command kubectl completion zsh)' >> /etc/zsh/zshrc
+echo 'source <(command kubectl completion zsh)' >> /etc/zsh/zshrc
