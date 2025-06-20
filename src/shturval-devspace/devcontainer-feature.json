@@ -1,0 +1,22 @@
+{
+    "name": "Shturval Devspace",
+    "id": "shturval-devspace",
+    "version": "0.0.1",
+    "description": "A devcontainer usefule for deploying shturval and other devops tasks",
+    "options": {
+        "stc_version": {
+            "type": "string",
+            "proposals": [
+                "2.8.1",                
+                "2.9.0",
+                "2.9.1",
+                "2.10.0"
+            ],
+            "default": "2.10.0",
+            "description": "Version for the stc cli tool"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
