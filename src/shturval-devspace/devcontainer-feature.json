@@ -22,8 +22,8 @@
 			"installZsh": true,
 			"nonFreePackages": true,
 			"installOhMyZsh": true,
-			"userUid": 1000,
-			"userGid": 1000,
+			"userUid": 1010,
+			"userGid": 1010,
 			"username": "shturval"
         }
     }
