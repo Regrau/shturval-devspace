@@ -16,7 +16,15 @@
             "description": "Version for the stc cli tool"
         }
     },
-    "installsAfter": [
-        "ghcr.io/devcontainers/features/common-utils"
-    ]
+    "dependsOn": {
+            "ghcr.io/devcontainers/features/common-utils" : {
+            "configureZshAsDefaultShell": true,
+			"installZsh": true,
+			"nonFreePackages": true,
+			"installOhMyZsh": true,
+			"userUid": 1000,
+			"userGid": 1000,
+			"username": "shturval"
+        }
+    }
 }
