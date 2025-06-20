@@ -28,7 +28,7 @@ helm repo add shturval https://r.shturval.tech/repository/shturval_helm
 curl -L https://dl.k8s.io/release/v1.33.0/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl
 chmod +x /usr/local/bin/kubectl
 
-cat << EOF >> /etc/zshrc
+cat << EOF >> /etc/zsh/zshrc
 kubectl () {
     command kubectl $*
     if [[ -z $KUBECTL_COMPLETE ]]
